@@ -1,0 +1,116 @@
+:root {
+  --violeta: hsl(263, 55%, 52%);
+  --gris: hsl(217, 19%, 35%);
+  --azul-fuerte: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  --gris-flojo: hsl(0, 0%, 81%);
+  --gris-azulado: hsl(210, 46%, 95%);
+  /*
+    1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+    */
+}
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 300;
+  background-color: var(--gris-azulado);
+}
+.full-container {
+  margin: 10vh 5vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 4vh 2vw;
+}
+.specific-container {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.specific-container img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  display: inline-block;
+}
+.user-item {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 10px;
+  position: absolute;
+  top: 23px;
+}
+.user-name {
+  margin: 0;
+  font-size: 1.02rem;
+  color: rgb(230, 230, 230);
+}
+.user-role {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.user-title {
+  color: rgb(230, 230, 230);
+  font-weight: 500;
+}
+.user-text {
+  margin-bottom: 0;
+}
+.container1 {
+  background-color: var(--violeta);
+  grid-column: 1 / 3;
+  grid-row: 1/ 2;
+  color: hsla(0, 0%, 81%, 0.719);
+}
+.container2 {
+  background-color: var(--gris);
+  grid-column: 3 / 4;
+  grid-row: 1/ 2;
+  color: hsla(0, 0%, 81%, 0.719);
+}
+.container3 {
+  background-color: var(--White);
+  color: var(--gris);
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.container4 {
+  background-color: var(--White);
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+.container5 {
+  background-color: var(--azul-fuerte);
+  grid-column: 2 / 4;
+  grid-row: 2/ 3;
+  color: hsla(0, 0%, 81%, 0.719);
+}
+.white-cont {
+  color: var(--gris) !important;
+}
+.quote-background {
+  background-repeat: no-repeat; /* No repetir la imagen de fondo */
+  background-position: top right; /* Centrar la imagen de fondo */
+  background-position-x: 95%;
+  background-size: 25% 33%; /* Ajustar el tamaño para ocupar el 33% de la altura del contenedor */
+  background-image: url("./images/bg-pattern-quotation.svg");
+  position: relative;
+}
+@media (max-width: 970px) {
+  .full-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
